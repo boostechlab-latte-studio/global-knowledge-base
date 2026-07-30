@@ -9,6 +9,37 @@ Chart yang salah bikin data BENAR tapi kesannya SALAH. Contoh: pakai pie chart b
 
 Prinsip dasar: **tanya dulu "pertanyaan apa yang mau dijawab chart ini?" sebelum milih tipenya.** Tipe chart itu jawaban dari pertanyaan itu, bukan sebaliknya.
 
+## Alur dari data mentah sampai ke chart yang tepat
+
+Sebelum masuk ke tabel pemilihan chart di bawah, ini peta prosesnya dari awal — bagian-bagian di bawah (peta cepat, legend, audit, cara nyeritain insight) itu masing-masing satu LANGKAH dari alur ini, bukan topik lepas-lepas:
+
+```
+1. Data mentah
+   (baris & kolom apa adanya — belum ada kesimpulan apa pun)
+        ↓
+2. Tentuin TUJUAN dulu — ini yang nentuin cabang mana yang diambil:
+        ↓
+   ┌─────────────────────────┐         ┌──────────────────────────┐
+   │ Mau CERITA/INSIGHT?     │         │ Mau AUDIT/CARI ANOMALI?   │
+   │ ("gimana performanya")  │         │ ("ada yang aneh gak")     │
+   └───────────┬─────────────┘         └────────────┬──────────────┘
+               ↓                                     ↓
+   3a. Pilih chart dari                   3b. Pilih chart dari
+       "Peta cepat" di bawah                  "Chart buat audit" di bawah
+       (bar/line/pie/dst sesuai                (boxplot/table/heatmap/
+       pertanyaan)                             histogram buat nemuin outlier)
+               ↓                                     ↓
+   4a. Tambah legend kalau perlu           4b. Investigasi manual titik
+       (lihat "Legend" di bawah)               yang keluar dari kebiasaan
+               ↓                                     ↓
+   5a. Ceritain insight-nya                5b. Laporkan temuan + rekomendasi
+       (lihat "Cara nyeritain insight")        tindak lanjut (bukan cuma
+                                                "ada yang aneh", tapi APA
+                                                yang perlu dicek manual)
+```
+
+**Poin penting:** dua cabang ini (insight vs audit) BEDA TUJUAN, jadi jangan pakai chart yang sama buat dua-duanya — bar chart yang bagus buat "cerita tren penjualan" itu BUKAN alat yang tepat buat "cari transaksi mencurigakan" (butuh boxplot/heatmap, lihat bagian audit). Kalau data-nya kebanyakan dimensi buat divisualisasikan langsung di cabang mana pun, ada opsi tambahan: pivot table (lihat bagian terpisah di bawah).
+
 ## Peta cepat: pertanyaan → tipe chart
 
 | Pertanyaan yang mau dijawab | Chart yang cocok | Kenapa |
