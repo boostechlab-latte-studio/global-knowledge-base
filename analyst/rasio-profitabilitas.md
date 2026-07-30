@@ -23,12 +23,19 @@ Alih-alih bilang "ROS kamu 12%," lebih gampang dicerna kalau dibalik jadi:
 
 > "Dari tiap Rp 1.000 yang masuk dari jualan, sekitar Rp 120 beneran jadi untung bersih. Sisanya Rp 880 abis buat bahan baku, gaji, sewa, dan biaya lain."
 
-## Contoh UMKM konkret
+## Contoh konkret
 
-Salon "Cantika" bulan ini:
+Salon "Cantika" bulan ini (jasa):
 - Penjualan bersih (jasa potong+treatment): Rp 12.000.000
 - Laba bersih: Rp 1.800.000
 - ROS = 1.800.000 / 12.000.000 × 100% = **15%**, atau: dari tiap Rp 1.000 jasa yang terjual, Rp 150 jadi untung bersih.
+
+**Contoh personal (individu):** Dedi, driver ojek online yang juga terima jasa antar barang sampingan:
+- Total pendapatan bulan ini (ojek + antar barang): Rp 4.500.000
+- Sisa bersih setelah bensin, servis motor, pulsa/kuota: Rp 2.700.000
+- ROS = 2.700.000 / 4.500.000 × 100% = **60%**
+
+ROS personal yang tinggi kayak gini wajar buat pekerjaan yang biaya "produksinya" kecil (modal utama cuma tenaga+motor) — beda konteks sama toko/salon yang biaya bahan/sewa-nya lebih besar. Ini contoh kenapa ambang batas "ROS bagus" gak bisa disamakan lintas jenis aktivitas — lihat `rasio-profitabilitas-insight.md`.
 
 ## Kapan ini WAJIB diangkat AI duluan
 

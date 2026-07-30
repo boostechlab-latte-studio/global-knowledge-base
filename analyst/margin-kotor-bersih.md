@@ -44,7 +44,7 @@ Dari contoh ini:
 - Margin Kotor = 8.000.000 / 20.000.000 × 100% = **40%**
 - Margin Bersih = 2.500.000 / 20.000.000 × 100% = **12,5%**
 
-## Contoh UMKM konkret
+## Contoh konkret
 
 Warung makan "Bu Sri" bulan ini:
 - Penjualan bersih: Rp 15.000.000
@@ -53,6 +53,14 @@ Warung makan "Bu Sri" bulan ini:
 - Laba Bersih: Rp 1.800.000 → **Margin Bersih 12%**
 
 Artinya: dari tiap Rp 1.000 jualan nasi, Rp 400 "kotor" tersisa setelah bahan baku, tapi cuma Rp 120 yang beneran jadi untung bersih setelah semua biaya operasional dibayar.
+
+**Contoh personal (individu, bukan usaha):** rumus margin sebenarnya bisa dipakai siapa aja yang punya "penjualan" dalam arti luas — misal freelancer desain grafis, Andi:
+- Pendapatan proyek bulan ini: Rp 8.000.000
+- "HPP" versi personal (biaya langsung per proyek — lisensi software, stok kertas/tinta print, dst): Rp 1.000.000 → Laba Kotor Rp 7.000.000 → **Margin Kotor 87,5%**
+- Biaya operasional pribadi yang nempel ke kerjaan (internet, listrik kerja, cicilan laptop kerja): Rp 3.500.000
+- Sisa bersih: Rp 3.500.000 → **Margin Bersih 43,75%**
+
+Konsepnya sama persis kayak usaha — bedanya cuma istilah "usaha" diganti "aktivitas menghasilkan uang", dan "HPP"/"beban operasional" disesuaikan jadi biaya langsung vs biaya hidup yang nempel ke pekerjaan itu.
 
 ## Kapan ini WAJIB diangkat AI duluan
 

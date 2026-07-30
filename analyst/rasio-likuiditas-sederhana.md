@@ -37,7 +37,7 @@ Current Ratio = 10.000.000 / 4.000.000 = **2,5**
 
 Artinya: setiap Rp 1 kewajiban jangka pendek, usaha ini punya Rp 2,5 aset lancar buat menutupinya.
 
-## Contoh UMKM konkret
+## Contoh konkret
 
 Toko kelontong "Pak Budi":
 - Aset lancar: kas Rp 3.000.000 + piutang warung langganan Rp 1.000.000 + stok barang Rp 6.000.000 = Rp 10.000.000
@@ -45,6 +45,13 @@ Toko kelontong "Pak Budi":
 - Current Ratio = 10.000.000 / 8.000.000 = **1,25**
 
 Walau angkanya di atas 1 (aset lancar lebih besar dari kewajiban), sebagian besar aset lancarnya "terkunci" di stok barang (Rp 6 juta dari Rp 10 juta) — bukan kas siap pakai. Ini beda penting yang perlu digali lebih lanjut (lihat bagian proaktif di bawah), bukan cuma dilihat dari angka rasio akhir saja.
+
+**Contoh personal (individu):** konsep current ratio bisa dipakai buat cek kesiapan keuangan pribadi juga — Rina, karyawan:
+- "Aset lancar" versi personal: tabungan Rp 5.000.000 + dana darurat di deposito cair Rp 3.000.000 = Rp 8.000.000
+- "Kewajiban lancar" versi personal: cicilan yang jatuh tempo bulan ini (kartu kredit, cicilan motor) Rp 2.000.000
+- Current Ratio = 8.000.000 / 2.000.000 = **4,0**
+
+Artinya Rina punya 4x lipat dana siap pakai dibanding kewajiban yang mesti dibayar bulan ini — jauh lebih longgar dibanding target minimal umum (biasanya disaranin di atas 1). Sama seperti bisnis, cek juga berapa dari "aset lancar" itu beneran CAIR (tabungan/deposito) vs yang keliatan ada tapi susah dicairkan cepat.
 
 ## Kapan ini WAJIB diangkat AI duluan
 
