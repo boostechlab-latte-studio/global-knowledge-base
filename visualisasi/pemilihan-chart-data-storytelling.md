@@ -20,9 +20,46 @@ Prinsip dasar: **tanya dulu "pertanyaan apa yang mau dijawab chart ini?" sebelum
 | "Datanya nyebar gimana, ada yang aneh/outlier gak?" | **Histogram** (buat liat sebaran) atau **Boxplot** (buat liat outlier) | Histogram nunjukin bentuk distribusi (normal/miring/dobel puncak), boxplot langsung nandain titik yang "gak wajar" |
 | "Ini terjadi di mana secara geografis?" | **Map** | Kalau ada data lokasi (kota, alamat, koordinat), peta jauh lebih intuitif daripada tabel nama kota |
 | "Gimana pola 2 kategori yang saling silang?" (misal region vs bulan, produk vs status) | **Heatmap** | Warna gelap-terang lebih cepet ke-scan mata daripada baca tabel angka silang |
-| "Gimana profil beberapa metrik sekaligus buat 1 entity?" | **Radar chart** | Nunjukin "bentuk" keseluruhan performa dalam 1 gambar, cocok buat bandingin beberapa entity punya kekuatan di mana |
 | "Berapa angka intinya, langsung aja?" | **KPI card** | Kadang jawaban terbaik BUKAN chart — cukup 1 angka besar yang jelas |
 | "Ini progress-nya udah sampe mana dari target?" | **Gauge** | Cocok kalau ada batas jelas (0-100%, target SLA) — bukan buat angka yang bisa naik tanpa batas |
+| "Gimana profil beberapa hal ini dibandingin sekaligus?" (bukan cuma 1 angka, tapi beberapa dimensi bareng) | **Radar chart** | Nunjukin "bentuk" keseluruhan beberapa metrik dalam 1 gambar — misal bandingin toko A vs toko B dari 5 aspek sekaligus (omset, margin, retensi pelanggan, dst) dalam 1 chart, bukan 5 chart terpisah |
+| "Datanya kebanyakan buat divisualisasikan langsung, tapi masih perlu dilihat detailnya" | **Pivot table** | Lihat bagian khusus di bawah — bukan chart visual, tapi cara ringkas nampilin data besar tetap bisa di-scan |
+
+## Kapan pakai KPI vs Gauge (sering ketuker)
+
+Dua-duanya nampilin 1 angka, tapi tujuannya beda:
+
+- **KPI card** — buat angka yang gak punya batas atas jelas dan yang penting cuma BESARANNYA (total penjualan, jumlah transaksi, total pelanggan baru). Gak ada "target 100%" yang masuk akal — omset boleh terus naik tanpa batas.
+- **Gauge** — buat angka yang punya SKALA/BATAS jelas dan yang penting seberapa DEKAT ke target/batas itu (tingkat keberhasilan pengiriman 87% dari target 95%, skor kepuasan 4,2 dari 5, kapasitas gudang terpakai 78%). Kalau angkanya bisa naik terus tanpa ada "penuh"/"maksimal" yang masuk akal, itu tandanya harusnya KPI, bukan gauge.
+
+Aturan cepat: ada kata "dari" yang implisit (87% **dari** target, 4,2 **dari** 5) → gauge. Angka berdiri sendiri (total omset bulan ini) → KPI.
+
+## Chart buat audit / pemeriksaan data (nyari yang aneh)
+
+Beda tujuan dari chart "cerita data" biasa — di sini tujuannya nyari ANOMALI, bukan nunjukin tren:
+
+- **Boxplot** — chart paling langsung buat nemuin outlier numerik (transaksi yang nilainya jauh di luar kewajaran, misal 1 transaksi Rp 50 juta di antara rata-rata Rp 200 ribu). Titik di luar "kotak" itu yang perlu dicek manual.
+- **Table dengan sorting** — buat audit detail per baris (urutkan dari nilai terbesar/terkecil/paling baru, baru scroll cari yang janggal) — kadang lebih efektif dari chart apa pun buat audit granular.
+- **Heatmap** — buat nemuin pola aneh di data 2 dimensi (misal: transaksi jam 3 pagi yang harusnya sepi tapi rame — kelihatan sebagai kotak gelap di posisi yang gak biasa di heatmap jam×hari).
+- **Histogram** — buat lihat apa distribusi datanya "wajar" (bentuk normal) atau mencurigakan (ada 2 puncak/dobel populasi yang harusnya 1 kelompok — bisa nandain 2 sumber data yang ketuker).
+
+## Legend — kenapa penting dan kapan wajib ada
+
+Legend itu "kunci warna" — tanpa itu, chart yang pakai lebih dari 1 warna/kategori jadi gak bisa dibaca sama sekali (pembaca gak tau warna biru itu apa, warna oranye itu apa).
+
+- **Wajib ada**: pie/donut chart (warna itu SATU-SATUNYA cara bedain slice), chart apa pun yang punya lebih dari 1 series/garis/kelompok warna (misal line chart yang bandingin 3 produk sekaligus, tiap produk beda warna).
+- **Gak perlu**: chart yang cuma 1 warna/1 series (misal bar chart 1 metrik doang, KPI card, gauge tunggal) — nambah legend di situ cuma nambah elemen visual tanpa nambah informasi.
+- **Posisi yang enak dibaca**: di atas atau di kanan chart, bukan di bawah kalau chart-nya lebar (mata harus balik ke atas buat cocokin warna, jadi capek).
+- **Interaktif itu bonus, bukan wajib**: kalau legend-nya bisa diklik buat nyembunyiin/nunjukin 1 kategori doang, itu nambah kegunaan — tapi legend yang statis (gak bisa diklik) tetap sah, yang penting warnanya jelas.
+
+## Data kebanyakan buat 1 chart? Coba pivot table
+
+Kadang jumlah kategori/dimensi yang mau dibandingin kebanyakan buat 1 chart visual (misal: 50 produk × 12 bulan × 3 region — gak ada chart yang bisa nampilin itu semua sekaligus dengan jelas). Di sini pivot table lebih berguna daripada maksain bikin chart:
+
+- **Konsepnya**: tabel yang barisnya 1 kategori (misal produk), kolomnya kategori lain (misal bulan), dan isinya angka teragregasi (misal total penjualan) — jadi bisa scan cepat "produk mana paling laku bulan mana" tanpa harus baca 50 chart terpisah.
+- **Kapan pilih pivot table dibanding chart**: kalau kombinasi kategori yang mau dibandingin lebih dari 2 dimensi, atau jumlah kategorinya banyak (>15-20) sehingga chart visual (bar/line) bakal terlalu penuh buat dibaca.
+- **Tetap kasih ringkasan visual di sampingnya**: pivot table bagus buat detail, tapi tambahkan 1 KPI atau bar chart kecil di sampingnya buat highlight "yang paling penting" (misal produk #1 terlaris) — jangan cuma kasih tabel mentah tanpa ada angka yang di-highlight duluan.
+- **Urutan & highlight**: sort kolom/baris dari yang paling besar, dan kasih warna latar (heatmap-style di dalam tabel, bukan chart terpisah) buat sel dengan nilai tinggi/rendah — biar pola masih kebaca sekilas walau bentuknya tabel.
 
 ## Kesalahan umum yang sering kejadian
 
