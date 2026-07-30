@@ -1,5 +1,7 @@
 # Global Knowledge Base
 
+> **Current version:** see [`manifest.json`](manifest.json) for the exact published version/checksum consumers should use. See [`CHANGELOG.md`](CHANGELOG.md) for what changed in each version.
+
 A centralized collection of structured knowledge content across multiple business and financial domains — written for reuse in documentation, retrieval-augmented generation (RAG) pipelines, and AI applications.
 
 ## Structure
