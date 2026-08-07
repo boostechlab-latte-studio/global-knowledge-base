@@ -37,4 +37,4 @@ Kedua angka itu benar secara matematis, tapi artinya SANGAT berbeda: 2% null di 
 
 ## Sumber
 
-Rumus persentase null itu definisi matematis universal (jumlah kosong dibagi total, dikali 100%) — dipakai identik di seluruh literatur data quality management, bukan rumus yang bisa berbeda per sumber. Ambang batas severity generik aplikasi ini sendiri ada di `backend/app/configs/data_quality.json` (`null_pct_medium`, `null_pct_high`) — bukan ambang batas dari file ini.
+Rumus persentase null itu definisi matematis universal (jumlah kosong dibagi total, dikali 100%) — dipakai identik di seluruh literatur data quality management, bukan rumus yang bisa berbeda per sumber. Ambang batas severity generik (`null_pct_medium`, `null_pct_high`) dihitung oleh aplikasi yang mengonsumsi konten ini — bukan ditentukan oleh file ini.

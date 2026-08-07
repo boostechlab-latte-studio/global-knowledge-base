@@ -37,4 +37,4 @@ Kolom `harga` di 100 transaksi warung makan: mayoritas nilai antara Rp 8.000–R
 
 ## Sumber
 
-Metode IQR untuk deteksi outlier adalah teknik statistik standar (Tukey's fences), dipakai luas dan konsisten di berbagai referensi statistik deskriptif — bukan rumus yang berbeda per sumber. Implementasi persis (termasuk pengali 1.5) ada di `backend/app/services/data_quality_compute.py`; ambang batas severity generik ada di `backend/app/configs/data_quality.json` (`outlier_pct_medium`, `outlier_pct_high`) — bukan dari file ini.
+Metode IQR untuk deteksi outlier adalah teknik statistik standar (Tukey's fences), dipakai luas dan konsisten di berbagai referensi statistik deskriptif — bukan rumus yang berbeda per sumber. Implementasi persis (termasuk pengali 1.5) dan ambang batas severity generik (`outlier_pct_medium`, `outlier_pct_high`) ditentukan oleh aplikasi yang mengonsumsi konten ini — bukan oleh file ini.

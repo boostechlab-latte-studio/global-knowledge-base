@@ -33,4 +33,4 @@ Toko online export data pesanan dari 2 sistem berbeda (sistem lama + sistem baru
 
 ## Sumber
 
-Rumus persentase duplikat itu definisi matematis langsung dari perbandingan baris (exact match seluruh kolom) — tidak ada standar/rumus alternatif yang berbeda di sumber manapun. Ambang batas severity generik aplikasi ada di `backend/app/configs/data_quality.json` (`duplicate_pct_medium`, `duplicate_pct_high`) — bukan dari file ini.
+Rumus persentase duplikat itu definisi matematis langsung dari perbandingan baris (exact match seluruh kolom) — tidak ada standar/rumus alternatif yang berbeda di sumber manapun. Ambang batas severity generik (`duplicate_pct_medium`, `duplicate_pct_high`) dihitung oleh aplikasi yang mengonsumsi konten ini — bukan ditentukan oleh file ini.
