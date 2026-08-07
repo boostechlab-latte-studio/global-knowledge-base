@@ -2,6 +2,10 @@
 
 Semua versi yang pernah dipublish, urut dari terbaru. Format versi: `MAJOR.MINOR.PATCH` (semver) — client menolak versi yang sama atau lebih kecil dari yang sudah terpasang, jadi versi WAJIB selalu naik tiap publish.
 
+## v1.5.0 — 2026-08-07
+
+- Kategori baru: **kualitas-data** — interpretasi null%/baris duplikat/persentase outlier per konteks bisnis (peran kolom, pola data), melengkapi ambang batas severity generik yang dihitung aplikasi konsumen. 3 topik (null%, baris duplikat, outlier%), masing-masing file rumus netral + file ambang batas interpretasi. **⚠️ Ambang batas di file `*-insight.md` masih DRAFT — rule-of-thumb umum di literatur data quality management, BUKAN riset primer/survei resmi — perlu direview manual lebih lanjut.**
+
 ## v1.4.0 — 2026-07-30
 
 - **visualisasi**: tambah section "Alur dari data mentah sampai ke chart yang tepat" — peta proses yang nyambungin pemilihan chart, legend, audit/anomali, dan cara nyeritain insight jadi satu alur runtut (bukan topik lepas-lepas).
