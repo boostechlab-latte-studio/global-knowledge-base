@@ -12,6 +12,10 @@ Content is organized into topic categories. Each category is a folder; each file
 ├── analyst/       # Business analysis — profitability, liquidity, and margin
 │                  # ratios for small-to-medium business owners, plus example
 │                  # analytical conversation flows.
+├── kualitas-data/ # Data quality interpretation — null%, duplicate rows, and
+│                  # outlier % per business context, complementing the
+│                  # generic numeric thresholds an application's own scoring
+│                  # engine already computes.
 ├── visualisasi/   # Choosing the right chart type and telling a clear story
 │                  # from data — general-purpose, not limited to financial data.
 └── manifest.json  # Version/package metadata for automated consumers.
